@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/markup/add-review.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/add-review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/main.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/head-guest.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/head-guest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/aviator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/aviator.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/bg-header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/bg-header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/bg-the-grand-budapest-hotel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/bg-the-grand-budapest-hotel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/bohemian-rhapsody.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/bohemian-rhapsody.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/dardjeeling-limited.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/dardjeeling-limited.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/icons/add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icons/add.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/icons/full-screen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icons/full-screen.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/icons/in-list.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icons/in-list.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/icons/pause.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icons/pause.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/icons/play-s.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icons/play-s.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/johnny-english.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/johnny-english.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/macbeth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/macbeth.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/midnight-special.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/midnight-special.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/mindhunter.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/mindhunter.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/moonrise-kingdom.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/moonrise-kingdom.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/no-country-for-old-men.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/no-country-for-old-men.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/orlando.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/orlando.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/player-poster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/player-poster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/pulp-fiction.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/pulp-fiction.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/revenant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/revenant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/seven-years-in-tibet.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/seven-years-in-tibet.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/shutter-island.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/shutter-island.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/snatch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/snatch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/the-grand-budapest-hotel-poster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/the-grand-budapest-hotel-poster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/war-of-the-worlds.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/war-of-the-worlds.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/we-need-to-talk-about-kevin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/we-need-to-talk-about-kevin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/img/what-we-do-in-the-shadows.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/what-we-do-in-the-shadows.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/movie-page-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/movie-page-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/movie-page-in-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/movie-page-in-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/movie-page-reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/movie-page-reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/movie-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/movie-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/my-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/my-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/player-pause.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/player-pause.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/player.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/sign-in-error.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/sign-in-error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/sign-in-message.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/sign-in-message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/sign-in.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FJIgKAgmAoyPxn0mLHGbCmbx7t" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/project/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/public" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="" />
+      <created>1664203870962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664203870962</updated>
+      <workItem from="1664203872558" duration="2415000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
