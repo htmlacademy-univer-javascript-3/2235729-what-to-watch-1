@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/head-guest-page/head-guest-page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page-details/movie-page-details.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page-in-list/movie-page-in-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page-reviews/movie-page-reviews.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/player-pause/player-pause.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/player/player.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-error/sign-in-error.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-message/sign-in-message.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/private-route/private-route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/not-found-page/not-found-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/app/app.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,29 +45,29 @@
       <recent name="$PROJECT_DIR$/project/public" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.movie-page.html">
-    <configuration name="add-review.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/add-review.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.sign-in-message.html">
+    <configuration name="player-pause.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/player-pause.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/main.html" useBuiltInWebServerPort="true">
+    <configuration name="player.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/player.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="movie-page-details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/movie-page-details.html" useBuiltInWebServerPort="true">
+    <configuration name="sign-in-error.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/sign-in-error.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="movie-page-in-list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/movie-page-in-list.html" useBuiltInWebServerPort="true">
+    <configuration name="sign-in-message.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/sign-in-message.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="movie-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/movie-page.html" useBuiltInWebServerPort="true">
+    <configuration name="sign-in.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/2235729-what-to-watch-1/markup/sign-in.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.movie-page.html" />
-        <item itemvalue="JavaScript Debug.movie-page-in-list.html" />
-        <item itemvalue="JavaScript Debug.movie-page-details.html" />
-        <item itemvalue="JavaScript Debug.add-review.html" />
-        <item itemvalue="JavaScript Debug.main.html" />
+        <item itemvalue="JavaScript Debug.sign-in-message.html" />
+        <item itemvalue="JavaScript Debug.sign-in-error.html" />
+        <item itemvalue="JavaScript Debug.sign-in.html" />
+        <item itemvalue="JavaScript Debug.player-pause.html" />
+        <item itemvalue="JavaScript Debug.player.html" />
       </list>
     </recent_temporary>
   </component>
@@ -95,6 +81,7 @@
       <updated>1664203870962</updated>
       <workItem from="1664203872558" duration="2415000" />
       <workItem from="1664890307796" duration="10279000" />
+      <workItem from="1665417424540" duration="5439000" />
     </task>
     <servers />
   </component>
