@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/private-route/private-route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/not-found-page/not-found-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/films-list/films-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/сomment-submission-form/сomment-submission-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/mocks/films.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/types/film.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page-details/movie-page-details.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page-in-list/movie-page-in-list.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page-reviews/movie-page-reviews.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/player-pause/player-pause.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/player/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/player/player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/sign-in-error/sign-in-error.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/sign-in-message/sign-in-message.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +37,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

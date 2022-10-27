@@ -1,10 +1,11 @@
-import SmallFilmCard from '../../components/small-film-card/small-film-card';
-
+import Film from '../../types/film';
+import FilmsList from '../../components/films-list/films-list';
 
 type MainPageProps = {
   title: string;
   genre: string;
   date: string;
+  films: Film[];
 }
 
 function MainPage(props: MainPageProps): JSX.Element {
@@ -169,69 +170,7 @@ function MainPage(props: MainPageProps): JSX.Element {
                 <a href="/#" className="catalog__genres-link">Thrillers</a>
               </li>
             </ul>
-
-            <div className="catalog__films-list">
-              <SmallFilmCard src_img={'img/fantastic-beasts-the-crimes-of-grindelwald.jpg'}
-                film_name={'Fantastic Beasts: The Crimes of Grindelwald'}
-              />
-              <SmallFilmCard src_img={'img/bohemian-rhapsody.jpg'}
-                film_name={'Bohemian Rhapsody'}
-              />
-              <SmallFilmCard src_img={'img/macbeth.jpg'}
-                film_name={'Macbeth'}
-              />
-              <SmallFilmCard src_img={'img/aviator.jpg'}
-                film_name={'Aviator'}
-              />
-              <SmallFilmCard src_img={'img/we-need-to-talk-about-kevin.jpg'}
-                film_name={'We need to talk about Kevin'}
-              />
-              <SmallFilmCard src_img={'img/what-we-do-in-the-shadows.jpg'}
-                film_name={'What We Do in the Shadows'}
-              />
-              <SmallFilmCard src_img={'img/revenant.jpg'}
-                film_name={'Revenant'}
-              />
-              <SmallFilmCard src_img={'img/johnny-english.jpg'}
-                film_name={'Johnny English'}
-              />
-              <SmallFilmCard src_img={'img/shutter-island.jpg'}
-                film_name={'Shutter Island'}
-              />
-              <SmallFilmCard src_img={'img/pulp-fiction.jpg'}
-                film_name={'Pulp Fiction'}
-              />
-              <SmallFilmCard src_img={'img/no-country-for-old-men.jpg'}
-                film_name={'No Country for Old Men'}
-              />
-              <SmallFilmCard src_img={'img/snatch.jpg'}
-                film_name={'Snatch'}
-              />
-              <SmallFilmCard src_img={'img/moonrise-kingdom.jpg'}
-                film_name={'Moonrise Kingdom'}
-              />
-              <SmallFilmCard src_img={'img/seven-years-in-tibet.jpg'}
-                film_name={'Seven Years in Tibet'}
-              />
-              <SmallFilmCard src_img={'img/midnight-special.jpg'}
-                film_name={'Midnight Special'}
-              />
-              <SmallFilmCard src_img={'img/war-of-the-worlds.jpg'}
-                film_name={'War of the Worlds'}
-              />
-              <SmallFilmCard src_img={'img/dardjeeling-limited.jpg'}
-                film_name={'Dardjeeling Limited'}
-              />
-              <SmallFilmCard src_img={'img/orlando.jpg'}
-                film_name={'Orlando'}
-              />
-              <SmallFilmCard src_img={'img/mindhunter.jpg'}
-                film_name={'Mindhunter'}
-              />
-              <SmallFilmCard src_img={'img/midnight-special.jpg'}
-                film_name={'Midnight Special'}
-              />
-            </div>
+            <FilmsList films={props.films}/>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
             </div>

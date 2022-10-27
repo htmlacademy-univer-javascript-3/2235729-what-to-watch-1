@@ -1,6 +1,11 @@
-import SmallFilmCard from '../../components/small-film-card/small-film-card';
+import Film from '../../types/film';
+import FilmsList from '../../components/films-list/films-list';
 
-function MyList(): JSX.Element {
+type MyListProps = {
+  myFilms: Film[];
+}
+
+function MyList(props: MyListProps): JSX.Element{
   return (
     <html lang="en">
       <head>
@@ -85,36 +90,7 @@ function MyList(): JSX.Element {
 
           <section className="catalog">
             <h2 className="catalog__title visually-hidden">Catalog</h2>
-
-            <div className="catalog__films-list">
-              <SmallFilmCard src_img={'img/fantastic-beasts-the-crimes-of-grindelwald.jpg'}
-                film_name={'Fantastic Beasts: The Crimes of Grindelwald'}
-              />
-              <SmallFilmCard src_img={'img/bohemian-rhapsody.jpg'}
-                film_name={'Bohemian Rhapsody'}
-              />
-              <SmallFilmCard src_img={'img/macbeth.jpg'}
-                film_name={'Macbeth'}
-              />
-              <SmallFilmCard src_img={'img/aviator.jpg'}
-                film_name={'Aviator'}
-              />
-              <SmallFilmCard src_img={'img/we-need-to-talk-about-kevin.jpg'}
-                film_name={'We need to talk about Kevin'}
-              />
-              <SmallFilmCard src_img={'img/what-we-do-in-the-shadows.jpg'}
-                film_name={'What We Do in the Shadows'}
-              />
-              <SmallFilmCard src_img={'img/revenant.jpg'}
-                film_name={'Revenant'}
-              />
-              <SmallFilmCard src_img={'img/johnny-english.jpg'}
-                film_name={'Johnny English'}
-              />
-              <SmallFilmCard src_img={'img/shutter-island.jpg'}
-                film_name={'Shutter Island'}
-              />
-            </div>
+            <FilmsList films={props.myFilms} />
           </section>
 
           <footer className="page-footer">
