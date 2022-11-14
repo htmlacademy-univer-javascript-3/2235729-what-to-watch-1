@@ -23,7 +23,7 @@ function FilmsList(props: FilmListProps): JSX.Element{
           id={film.id}
           title={film.title}
           srcImg={film.smallCardSrcImage}
-          srcPreviewVideo={film.srcVideo}
+          srcPreviewVideo={film.srcPreviewVideo}
           isHovered={activeCard === film.id}
           mouseOverHandler={() => changeActiveCard(film.id)}
           mouseLeaveHandler={() => changeActiveCard(0)}

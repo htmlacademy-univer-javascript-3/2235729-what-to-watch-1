@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PreviewVideoPlayer from '../preview-video-player/preview-video-player';
 
 type SmallFilmCardProps = {
   id: number;
@@ -12,10 +13,16 @@ type SmallFilmCardProps = {
 }
 
 function SmallFilmCard(props: SmallFilmCardProps): JSX.Element{
+  const smallCardWidth = '280';
+  const smallCardHeight = '175';
   return (
     <article className="small-film-card catalog__films-card" onMouseOver={props.mouseOverHandler} onMouseLeave={props.mouseLeaveHandler}>
       <div className="small-film-card__image">
-        <img src={props.srcImg} alt={props.title} width='280' height='175'/>
+        {
+          props.isHovered
+            ? <PreviewVideoPlayer posterImage={props.srcImg} previewVideoSrc={props.srcPreviewVideo} width={smallCardWidth} height={smallCardHeight}/>
+            : <img src={props.srcImg} alt={props.title} width={smallCardWidth} height={smallCardHeight}/>
+        }
       </div>
       <h3 className="small-film-card__title">
         <Link className="small-film-card__link" to={`/films/${props.id}`}>{props.title}</Link>
