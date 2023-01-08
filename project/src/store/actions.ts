@@ -4,5 +4,5 @@ const Action = {
   CHANGE_GENRE: 'CHANGE_GENRE'
 };
 
-export const changeGenre = createAction(Action.CHANGE_GENRE, (genre) => {return {payload: genre};});
+export const changeGenre = createAction(Action.CHANGE_GENRE, (genre: string) => ({payload: genre}));
 

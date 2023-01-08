@@ -6,7 +6,7 @@ type FilmListProps = {
   films: Film[];
 }
 
-function FilmsList(props: FilmListProps): JSX.Element{
+function FilmsList({films}: FilmListProps): JSX.Element{
   const [activeCard, setActiveCard] = useState(0);
 
   const changeActiveCard = (filmId: number) => {
@@ -17,7 +17,7 @@ function FilmsList(props: FilmListProps): JSX.Element{
 
   return (
     <div className="catalog__films-list">
-      {props.films.map((film) => (
+      {films.map((film) => (
         <SmallFilmCard
           key={film.title}
           id={film.id}

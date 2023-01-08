@@ -20,7 +20,7 @@ function App({title, genre, date, films}: MainPageProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={(<MainPage filmTitle={title} filmGenre={genre} filmDate={date} films={films} key={title}/>)}/>
+        <Route path="/" element={(<MainPage filmTitle={title} filmGenre={genre} filmDate={date} key={title}/>)}/>
         <Route path='login' element={<SignIn />}/>
         <Route path='mylist' element={<PrivateRoute hasAccess={false} navigateTo={<MyList myFilms={films}/>} />}/>
         <Route path='films/:id/'>

@@ -1,23 +1,17 @@
-import Film from '../../types/film';
 import FilmsList from '../../components/films-list/films-list';
-import Genre from '../../types/genre';
+import GenreList from '../../components/genre-list/genre-list';
+import {useAppSelector} from '../../hooks';
+import Footer from '../../components/footer/footer';
 
 type MainPageProps = {
   filmTitle: string;
   filmGenre: string;
   filmDate: string;
-  films: Film[];
 }
 
-function GetGenres() {
-  const genres: string[] = [];
-  for (const key in Genre) {
-    genres.push(Genre[key as keyof typeof Genre]);
-  }
-  return genres;
-}
 
-function MainPage({filmTitle, filmGenre, filmDate, films}: MainPageProps): JSX.Element {
+function MainPage({filmTitle, filmGenre, filmDate}: MainPageProps): JSX.Element {
+  const films = useAppSelector((state) => state.filmsList);
   return (
     <>
       <section className="film-card">
@@ -86,34 +80,13 @@ function MainPage({filmTitle, filmGenre, filmDate, films}: MainPageProps): JSX.E
       <div className="page-content">
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
-
-          <ul className="catalog__genres-list">
-            {
-              GetGenres().map((genre) => (
-                <li className="catalog__genres-item catalog__genres-item--active" key={genre}>
-                  <a href="/#" className="catalog__genres-link">{genre}</a>
-                </li>))
-            }
-          </ul>
+          <GenreList />
           <FilmsList films={films}/>
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
           </div>
         </section>
-
-        <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light" href="/#">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <div className="copyright">
-            <p>© 2019 What to watch Ltd.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );
