@@ -1,6 +1,5 @@
 import {createReducer} from '@reduxjs/toolkit';
 import films from '../mocks/films';
-import Genre from '../types/genre';
 
 import {
   changeGenre

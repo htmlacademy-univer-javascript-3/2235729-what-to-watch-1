@@ -1,10 +1,10 @@
-import {useEffect, useRef} from 'react';
+import {useRef} from 'react';
 
 type PreviewVideoPlayerProps = {
-  posterImage: string,
-  previewVideoSrc: string,
-  width: string,
-  height: string
+  posterImage: string;
+  previewVideoSrc: string;
+  width: string;
+  height: string;
 };
 
 function PreviewVideoPlayer (props: PreviewVideoPlayerProps): JSX.Element {

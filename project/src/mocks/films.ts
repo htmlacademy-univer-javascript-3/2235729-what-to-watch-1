@@ -1,5 +1,5 @@
 import Film from '../types/film';
-import Genre from '../types/genre'
+import Genre from '../types/genre';
 
 const films: Film[] = [
   {
@@ -22,7 +22,7 @@ const films: Film[] = [
   {
     id: 2,
     title: 'Bohemian Rhapsody',
-    genre: Genre.BIOPIC,
+    genre: Genre.DRAMA,
     releaseDate: 2015,
     smallCardSrcImage: 'img/bohemian-rhapsody.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
