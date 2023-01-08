@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/preview-video-player/preview-video-player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/preview-video-player/preview-video-player.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/mocks/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/films.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/head-guest-page/head-guest-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/head-guest-page/head-guest-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/types/genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/genre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +101,7 @@
       <workItem from="1669458122601" duration="771000" />
       <workItem from="1669642746291" duration="4000" />
       <workItem from="1670416482884" duration="3286000" />
-      <workItem from="1673172299388" duration="2521000" />
+      <workItem from="1673172299388" duration="4975000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
-import {useRef} from 'react';
+import {useRef, useEffect} from 'react';
+
 
 type PreviewVideoPlayerProps = {
   posterImage: string;
@@ -7,19 +8,23 @@ type PreviewVideoPlayerProps = {
   height: string;
 };
 
-function PreviewVideoPlayer (props: PreviewVideoPlayerProps): JSX.Element {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  setTimeout(() => videoRef.current?.play(), 1000);
+function PreviewVideoPlayer ({posterImage, previewVideoSrc, width, height}: PreviewVideoPlayerProps): JSX.Element {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    setTimeout(
+      () => {videoRef.current?.play();},
+      1000);
+  }, []);
   return (
     <video
       ref={videoRef}
-      src={props.previewVideoSrc}
-      poster={props.posterImage}
-      width={props.width}
-      height={props.height}
+      src={previewVideoSrc}
+      poster={posterImage}
+      width={width}
+      height={height}
       loop muted
     >
-      <source src={props.previewVideoSrc} type="video/mp4" />
+      <source src={previewVideoSrc} type="video/mp4" />
     </video>
   );
 }
