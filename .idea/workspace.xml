@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/preview-video-player/preview-video-player.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/footer/footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/genre-list/genre-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/types/state.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/films-list/films-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/films-list/films-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/mocks/films.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/films.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -44,12 +53,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/src/types" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/src/types" />
+      <recent name="$PROJECT_DIR$/project/src/hooks" />
+      <recent name="$PROJECT_DIR$/project/src/store" />
+      <recent name="$PROJECT_DIR$/project/src/redux" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/project/public" />
     </key>
@@ -91,6 +106,15 @@
       <workItem from="1664203872558" duration="2415000" />
       <workItem from="1664890307796" duration="10279000" />
       <workItem from="1665417424540" duration="5439000" />
+      <workItem from="1668515321677" duration="2681000" />
+      <workItem from="1668707029502" duration="5836000" />
+      <workItem from="1669060696485" duration="5775000" />
+      <workItem from="1669286358687" duration="1030000" />
+      <workItem from="1669323822322" duration="55000" />
+      <workItem from="1669458122601" duration="771000" />
+      <workItem from="1669642746291" duration="4000" />
+      <workItem from="1670416482884" duration="3286000" />
+      <workItem from="1673172299388" duration="10367000" />
     </task>
     <servers />
   </component>

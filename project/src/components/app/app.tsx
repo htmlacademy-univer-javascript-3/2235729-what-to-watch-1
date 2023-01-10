@@ -8,7 +8,6 @@ import NotFoundPage from '../../pages/not-found-page/not-found-page';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import PrivateRoute from '../private-route/private-route';
 import Film from '../../types/film';
-import films from '../../mocks/films';
 
 type MainPageProps = {
   title: string;
@@ -17,18 +16,18 @@ type MainPageProps = {
   films: Film[];
 }
 
-function App(props: MainPageProps): JSX.Element {
+function App({title, genre, date, films}: MainPageProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={(<MainPage title={props.title} genre={props.genre} date={props.date} films={props.films} key={props.title}/>)}/>
+        <Route path="/" element={(<MainPage filmTitle={title} filmGenre={genre} filmDate={date} key={title}/>)}/>
         <Route path='login' element={<SignIn />}/>
         <Route path='mylist' element={<PrivateRoute hasAccess={false} navigateTo={<MyList myFilms={films}/>} />}/>
         <Route path='films/:id/'>
-          <Route index element={<MoviePage films={props.films}/>} />
-          <Route path='review' element={<AddReviewPage films={props.films}/>}/>
+          <Route index element={<MoviePage films={films}/>} />
+          <Route path='review' element={<AddReviewPage films={films}/>}/>
         </Route>
-        <Route path='player/:id' element={<Player films={props.films}/>}/>
+        <Route path='player/:id' element={<Player films={films}/>}/>
         <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
     </BrowserRouter>

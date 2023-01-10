@@ -1,10 +1,11 @@
 import Film from '../types/film';
+import Genre from '../types/genre';
 
 const films: Film[] = [
   {
     id: 1,
     title: 'Fantastic Beasts: The Crimes of Grindelwald',
-    genre: 'Drama',
+    genre: Genre.DRAMA,
     releaseDate: 2014,
     smallCardSrcImage: 'img/fantastic-beasts-the-crimes-of-grindelwald.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -21,7 +22,7 @@ const films: Film[] = [
   {
     id: 2,
     title: 'Bohemian Rhapsody',
-    genre: 'Biopic',
+    genre: Genre.DRAMA,
     releaseDate: 2015,
     smallCardSrcImage: 'img/bohemian-rhapsody.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -38,7 +39,7 @@ const films: Film[] = [
   {
     id: 3,
     title: 'Macbeth',
-    genre: 'Drama',
+    genre: Genre.DRAMA,
     releaseDate: 2016,
     smallCardSrcImage: 'img/macbeth.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -55,7 +56,7 @@ const films: Film[] = [
   {
     id: 4,
     title: 'Aviator',
-    genre: 'Drama',
+    genre: Genre.DRAMA,
     releaseDate: 2003,
     smallCardSrcImage: 'img/aviator.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -72,7 +73,7 @@ const films: Film[] = [
   {
     id: 5,
     title: 'We need to talk about Kevin',
-    genre: 'Comedy',
+    genre: Genre.COMEDY,
     releaseDate: 2011,
     smallCardSrcImage: 'img/we-need-to-talk-about-kevin.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -89,7 +90,7 @@ const films: Film[] = [
   {
     id: 6,
     title: 'What We Do in the Shadows',
-    genre: 'Comedy',
+    genre: Genre.COMEDY,
     releaseDate: 2019,
     smallCardSrcImage: 'img/what-we-do-in-the-shadows.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -106,7 +107,7 @@ const films: Film[] = [
   {
     id: 7,
     title: 'Revenant',
-    genre: 'Comedy',
+    genre: Genre.COMEDY,
     releaseDate: 2019,
     smallCardSrcImage: 'img/revenant.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',
@@ -123,7 +124,7 @@ const films: Film[] = [
   {
     id: 8,
     title: 'Johnny English',
-    genre: 'Comedy',
+    genre: Genre.COMEDY,
     releaseDate: 2019,
     smallCardSrcImage: 'img/johnny-english.jpg',
     posterSrcImage: 'img/the-grand-budapest-hotel-poster.jpg',

@@ -12,20 +12,21 @@ type SmallFilmCardProps = {
   mouseLeaveHandler: (hoverHandlerevent: MouseEvent<HTMLDivElement>) => void;
 }
 
-function SmallFilmCard(props: SmallFilmCardProps): JSX.Element{
+function SmallFilmCard({isHovered, srcImg, srcPreviewVideo, id, mouseLeaveHandler, mouseOverHandler, title}: SmallFilmCardProps): JSX.Element{
   const smallCardWidth = '280';
   const smallCardHeight = '175';
+
   return (
-    <article className="small-film-card catalog__films-card" onMouseOver={props.mouseOverHandler} onMouseLeave={props.mouseLeaveHandler}>
+    <article className="small-film-card catalog__films-card" onMouseOver={mouseOverHandler} onMouseLeave={mouseLeaveHandler}>
       <div className="small-film-card__image">
         {
-          props.isHovered
-            ? <PreviewVideoPlayer posterImage={props.srcImg} previewVideoSrc={props.srcPreviewVideo} width={smallCardWidth} height={smallCardHeight}/>
-            : <img src={props.srcImg} alt={props.title} width={smallCardWidth} height={smallCardHeight}/>
+          isHovered
+            ? <PreviewVideoPlayer posterImage={srcImg} previewVideoSrc={srcPreviewVideo} width={smallCardWidth} height={smallCardHeight}/>
+            : <img src={srcImg} alt={title} width={smallCardWidth} height={smallCardHeight}/>
         }
       </div>
       <h3 className="small-film-card__title">
-        <Link className="small-film-card__link" to={`/films/${props.id}`}>{props.title}</Link>
+        <Link className="small-film-card__link" to={`/films/${id}`}>{title}</Link>
       </h3>
     </article>);
 }
