@@ -1,19 +1,21 @@
 type Film = {
   id: number;
-  title: string;
-  genre: string;
-  releaseDate: number;
-  smallCardSrcImage: string;
-  posterSrcImage: string;
-  srcPreviewVideo: string;
-  srcVideo: string;
-  duration: number;
+  name: string;
+  posterImage: string;
+  previewImage: string;
+  backgroundImage: string;
+  backgroundColor: string;
+  videoLink: string;
+  previewVideoLink: string;
   description: string;
-  director: string;
-  rating: number;
-  similarFilms: Film[];
-  starring: string[];
-  srcBgImage: string;
+  rating: number
+  scoresCount: number
+  director: string
+  starring: string[]
+  runTime: number
+  genre: string
+  released: number
+  isFavorite: boolean
 }
 
 export default Film;

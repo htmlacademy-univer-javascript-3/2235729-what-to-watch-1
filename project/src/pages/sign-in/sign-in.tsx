@@ -1,32 +1,45 @@
 import Footer from '../../components/footer/footer';
+import Logo from '../../components/logo/logo';
+import React, {FormEvent, useState} from 'react';
+import {login} from '../../store/api-actions';
+import {useAppDispatch, useAppSelector} from '../../hooks';
+import {Navigate} from 'react-router-dom';
+import AuthorizationStatus from '../../types/authorizationStatus';
+
 
 function SignIn(): JSX.Element {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useAppDispatch();
+  const authStatus = useAppSelector((state) => state.authorizationStatus);
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    dispatch(login({email: email, password: password}));
+  }
+
+  if (authStatus === AuthorizationStatus.AUTHORIZED) {
+    return <Navigate to='/' />;
+  }
+
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
-        <div className="logo">
-          <a href="main.html" className="logo__link">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </a>
-        </div>
-
+        <Logo/>
         <h1 className="page-title user-page__title">Sign in</h1>
       </header>
 
       <div className="sign-in user-page__content">
-        <form action="#" className="sign-in__form">
+        <form onSubmit={handleSubmit} className="sign-in__form">
           <div className="sign-in__fields">
             <div className="sign-in__field">
               <input className="sign-in__input" type="email" placeholder="Email address" name="user-email"
-                id="user-email"
+                id="user-email" onChange={(e) => setEmail(e.target.value)}
               />
               <label className="sign-in__label visually-hidden" form="user-email">Email address</label>
             </div>
             <div className="sign-in__field">
               <input className="sign-in__input" type="password" placeholder="Password" name="user-password"
-                id="user-password"
+                id="user-password" onChange={(e) => setPassword(e.target.value)}
               />
               <label className="sign-in__label visually-hidden" form="user-password">Password</label>
             </div>
@@ -36,7 +49,7 @@ function SignIn(): JSX.Element {
           </div>
         </form>
       </div>
-      <Footer />
+      <Footer/>
     </div>);
 }
 

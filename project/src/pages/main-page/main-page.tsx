@@ -2,59 +2,41 @@ import FilmsList from '../../components/films-list/films-list';
 import GenreList from '../../components/genre-list/genre-list';
 import {useAppSelector} from '../../hooks';
 import Footer from '../../components/footer/footer';
-
-type MainPageProps = {
-  filmTitle: string;
-  filmGenre: string;
-  filmDate: string;
-}
+import Logo from '../../components/logo/logo';
+import UserBlock from '../../components/user-block/user-block';
 
 
-function MainPage({filmTitle, filmGenre, filmDate}: MainPageProps): JSX.Element {
-  const films = useAppSelector((state) => state.filmsList);
+function MainPage(): JSX.Element {
+  const films = useAppSelector((state) => state.genreFilms);
+  const promoMovie = useAppSelector((state) => state.promoMovie);
+  const myFilmsCount = useAppSelector((state) => state.favoriteFilms).length;
+  if (promoMovie === null) {
+    return <></>
+  }
   return (
     <>
       <section className="film-card">
         <div className="film-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel"/>
+          <img src={promoMovie.backgroundImage} alt={promoMovie.name}/>
         </div>
-
         <h1 className="visually-hidden">WTW</h1>
-
         <header className="page-header film-card__head">
-          <div className="logo">
-            <a className="logo__link" href="/#">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <ul className="user-block">
-            <li className="user-block__item">
-              <div className="user-block__avatar">
-                <img src="img/avatar.jpg" alt="User avatar" width="63" height="63"/>
-              </div>
-            </li>
-            <li className="user-block__item">
-              <a className="user-block__link" href="/#">Sign out</a>
-            </li>
-          </ul>
+          <Logo />
+          <UserBlock />
         </header>
-
         <div className="film-card__wrap">
           <div className="film-card__info">
             <div className="film-card__poster">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster"
-                width="218" height="327"
+              <img src={promoMovie.posterImage} alt={`${promoMovie.name} poster`}
+                   width="218" height="327"
               />
             </div>
 
             <div className="film-card__desc">
-              <h2 className="film-card__title">{filmTitle}</h2>
+              <h2 className="film-card__title">{promoMovie.name}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">{filmGenre}</span>
-                <span className="film-card__year">{filmDate}</span>
+                <span className="film-card__genre">{promoMovie.genre}</span>
+                <span className="film-card__year">{promoMovie.released}</span>
               </p>
 
               <div className="film-card__buttons">
@@ -69,7 +51,7 @@ function MainPage({filmTitle, filmGenre, filmDate}: MainPageProps): JSX.Element 
                     <use xlinkHref="#add"></use>
                   </svg>
                   <span>My list</span>
-                  <span className="film-card__count">9</span>
+                  <span className="film-card__count">{myFilmsCount}</span>
                 </button>
               </div>
             </div>

@@ -19,11 +19,11 @@ function FilmsList({films}: FilmListProps): JSX.Element{
     <div className="catalog__films-list">
       {films.map((film) => (
         <SmallFilmCard
-          key={film.title}
+          key={film.name}
           id={film.id}
-          title={film.title}
-          srcImg={film.smallCardSrcImage}
-          srcPreviewVideo={film.srcPreviewVideo}
+          title={film.name}
+          srcImg={film.previewImage}
+          srcPreviewVideo={film.previewVideoLink}
           isHovered={activeCard === film.id}
           mouseOverHandler={() => changeActiveCard(film.id)}
           mouseLeaveHandler={() => changeActiveCard(0)}
