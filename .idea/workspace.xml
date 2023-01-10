@@ -2,20 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/footer/footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/genre-list/genre-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/hooks/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/types/state.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/films-list/films-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/films-list/films-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/genre-list/genre-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/genre-list/genre-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/preview-video-player/preview-video-player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/preview-video-player/preview-video-player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/private-route/private-route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/private-route/private-route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/small-film-card/small-film-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/сomment-submission-form/сomment-submission-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/сomment-submission-form/сomment-submission-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/hooks/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/hooks/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/hooks/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/mocks/films.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/head-guest-page/head-guest-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/head-guest-page/head-guest-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/not-found-page/not-found-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/not-found-page/not-found-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/player/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/player/player.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/store/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/film.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/genre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/src/types" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -115,6 +136,8 @@
       <workItem from="1669642746291" duration="4000" />
       <workItem from="1670416482884" duration="3286000" />
       <workItem from="1673172299388" duration="10367000" />
+      <workItem from="1673380300216" duration="153000" />
+      <workItem from="1673381032963" duration="339000" />
     </task>
     <servers />
   </component>

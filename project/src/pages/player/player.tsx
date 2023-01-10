@@ -1,19 +1,16 @@
 import React from 'react';
 import Film from '../../types/film';
 import {Link, useParams, Navigate} from 'react-router-dom';
+import {useAppSelector} from '../../hooks';
 
-type PlayerProps ={
-  films: Film[];
-};
 
-function Player(props: PlayerProps): JSX.Element{
-
+function Player(): JSX.Element{
+  const films = useAppSelector((state) => state.allFilms);
   const id = Number(useParams().id);
-  const film = props.films.find((f) => f.id === id);
-
+  const film = films.find((f) => f.id === id);
   return film ? (
     <div className='player'>
-      <video src={film.srcVideo} className='player__video' poster={film.posterSrcImage}></video>
+      <video src={film.videoLink} className='player__video' poster={film.posterImage}></video>
 
       <Link to={`/films/${id}`} type='button' className='player__exit'>Exit</Link>
 
@@ -23,7 +20,7 @@ function Player(props: PlayerProps): JSX.Element{
             <progress className='player__progress' value='30' max='100'></progress>
             <div className='player__toggler' style={{left: '30%'}}>Toggler</div>
           </div>
-          <div className='player__time-value'>{`${film.duration / 60}:${film.duration % 60}`}</div>
+          <div className='player__time-value'>{`${film.runTime / 60}:${film.runTime % 60}`}</div>
         </div>
 
         <div className='player__controls-row'>

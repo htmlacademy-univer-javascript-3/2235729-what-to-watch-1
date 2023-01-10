@@ -1,6 +1,6 @@
 import Genre from '../../types/genre';
 import {useAppDispatch, useAppSelector} from '../../hooks';
-import {changeGenre} from '../../store/actions';
+import {setGenre} from '../../store/actions';
 import {FormEvent} from 'react';
 function GenreList(): JSX.Element {
   const currentGenre = useAppSelector((state) => state.genre);
@@ -14,7 +14,7 @@ function GenreList(): JSX.Element {
   }
   function updateGenre(event: FormEvent<HTMLAnchorElement>) {
     event.preventDefault();
-    dispatch(changeGenre(event.currentTarget.id));
+    dispatch(setGenre(event.currentTarget.id));
   }
 
   return (
