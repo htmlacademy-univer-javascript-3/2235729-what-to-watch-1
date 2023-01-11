@@ -54,6 +54,9 @@ export const mainReducer = createSlice({
       .addCase(fetchFavoriteFilms.fulfilled, (state, action) => {
         state.favoriteFilms = action.payload;
       })
+      .addCase(fetchFavoriteFilms.rejected, (state, action) => {
+        state.favoriteFilms = [];
+      })
       .addCase(fetchPromo.fulfilled, (state, action) => {
         state.promo = action.payload;
       });

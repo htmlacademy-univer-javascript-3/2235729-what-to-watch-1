@@ -4,7 +4,6 @@ import Details from '../details/details';
 import Reviews from '../reviews/reviews';
 import Overview from '../overview/overview';
 import React, {useState, FormEvent} from 'react';
-import {Navigate} from 'react-router-dom';
 
 const tabs = {
   OVERVIEW: 'Overview',
@@ -30,7 +29,7 @@ function MoviePageTabs({film, reviews}: MoviePageTabsProps): JSX.Element {
     setCurrentTab(event.currentTarget.id);
   }
   
-  function getCurrentTabFragment(): JSX.Element {
+  function TabFragment(): JSX.Element {
     if (currentTab === tabs.REVIEWS) {
       return (<Reviews reviews={reviews}/>);
     }
@@ -56,8 +55,8 @@ function MoviePageTabs({film, reviews}: MoviePageTabsProps): JSX.Element {
           }
         </ul>
       </nav>
-      {getCurrentTabFragment()}
-    </div>) : <Navigate to="/#" />;
+      <TabFragment />
+    </div>) : <React.Fragment />;
 }
 
 export default MoviePageTabs;

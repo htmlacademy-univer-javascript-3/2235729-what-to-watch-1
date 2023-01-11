@@ -120,7 +120,8 @@ export const setFavorite = createAsyncThunk<Film, {status: boolean; filmId: stri
 }>(
   '/favorite/id/status',
   async ({status, filmId}, {dispatch, extra: api}) => {
-    const {data} = await api.get<Film>(`/favorite/${filmId}/${status ? 1 : 0}`);
+    const {data} = await api.post<Film>(`/favorite/${filmId}/${status ? 1 : 0}`);
+    dispatch(fetchFavoriteFilms());
     return data;
   },
 );
