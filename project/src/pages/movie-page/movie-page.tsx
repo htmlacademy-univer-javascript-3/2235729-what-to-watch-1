@@ -26,7 +26,6 @@ function MoviePage(): JSX.Element {
   const film = useAppSelector((state) => state[ReducerName.Film].film);
   const reviews = useAppSelector((state) => state[ReducerName.Film].reviews);
   const similar = useAppSelector((state) => state[ReducerName.Film].similar);
-  const favoriteCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
 
   return film ? (
     <>
@@ -53,7 +52,7 @@ function MoviePage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={film.id}/>
-                <AddMyListButton filmId={film.id} isFavorite={film.isFavorite}/>
+                <AddMyListButton filmId={film.id}/>
                 <a href="add-review.html" className="btn film-card__button">Add review</a>
               </div>
             </div>

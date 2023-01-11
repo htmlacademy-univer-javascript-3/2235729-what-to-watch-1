@@ -13,10 +13,7 @@ import AddMyListButton from '../../components/add-my-list-button/add-my-list-but
 function MainPage(): JSX.Element {
   const films = useAppSelector((state) => state[ReducerName.Main].genreFilms);
   const promo = useAppSelector((state) => state[ReducerName.Main].promo);
-  if (promo === null) {
-    return (<React.Fragment />);
-  }
-  return (
+  return promo ? (
     <>
       <section className="film-card">
         <div className="film-card__bg">
@@ -44,7 +41,7 @@ function MainPage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={promo.id}/>
-                <AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite}/>
+                <AddMyListButton filmId={promo.id}/>
               </div>
             </div>
           </div>
@@ -63,7 +60,7 @@ function MainPage(): JSX.Element {
         <Footer />
       </div>
     </>
-  );
+  ) : (<React.Fragment />);
 }
 
 export default MainPage;
