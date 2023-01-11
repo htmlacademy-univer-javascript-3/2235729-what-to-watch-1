@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import FilmsList from '../../components/films-list/films-list';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
@@ -11,6 +11,7 @@ import {fetchSimilar, fetchReviews, fetchFilm} from '../../store/api-actions';
 import NotFoundPage from '../not-found-page/not-found-page';
 import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
+import AuthorizationStatus from '../../types/authorizationStatus';
 
 
 function MoviePage(): JSX.Element {
@@ -26,6 +27,7 @@ function MoviePage(): JSX.Element {
   const film = useAppSelector((state) => state[ReducerName.Film].film);
   const reviews = useAppSelector((state) => state[ReducerName.Film].reviews);
   const similar = useAppSelector((state) => state[ReducerName.Film].similar);
+  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
 
   return film ? (
     <>
@@ -53,7 +55,11 @@ function MoviePage(): JSX.Element {
               <div className="film-card__buttons">
                 <PlayButton filmId={film.id}/>
                 <AddMyListButton filmId={film.id}/>
-                <a href="add-review.html" className="btn film-card__button">Add review</a>
+                {
+                  authStatus === AuthorizationStatus.AUTHORIZED ?
+                    (<a href="add-review.html" className="btn film-card__button">Add review</a>) :
+                    (<React.Fragment />)
+                }
               </div>
             </div>
           </div>
