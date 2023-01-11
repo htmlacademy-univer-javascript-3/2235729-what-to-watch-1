@@ -54,7 +54,7 @@ function MoviePage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={film.id}/>
-                <AddMyListButton filmId={film.id}/>
+                <AddMyListButton filmId={film.id} isFavorite={film.isFavorite} isPromo={false}/>
                 {
                   authStatus === AuthorizationStatus.AUTHORIZED ?
                     (<a href="add-review.html" className="btn film-card__button">Add review</a>) :

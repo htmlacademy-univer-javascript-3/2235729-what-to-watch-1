@@ -1,18 +1,26 @@
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import {ReducerName} from '../../types/reducerName';
-import {setFavorite} from '../../store/api-actions';
+import {setFavorite, fetchFilm, fetchPromo} from '../../store/api-actions';
+import {FormEvent} from 'react';
 
 type AddMyListButtonProps = {
   filmId: number;
+  isFavorite: boolean;
+  isPromo: boolean;
 }
 
-function AddMyListButton({filmId}: AddMyListButtonProps): JSX.Element {
+function AddMyListButton({filmId, isFavorite, isPromo}: AddMyListButtonProps): JSX.Element {
   const myFilmsCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
-  const isFavorite = useAppSelector((state) => state[ReducerName.Main].films).find((film) => film.id === filmId)?.isFavorite;
   const dispatch = useAppDispatch();
+  
+  function handleSetfavorite(event: FormEvent<HTMLButtonElement>) {
+    event.preventDefault();
+    dispatch(setFavorite({status: !isFavorite, filmId: filmId.toString()}));
+  }
+  
   return (
     <button className="btn btn--list film-card__button" type="button"
-      onClick={() => {dispatch(setFavorite({status: !isFavorite, filmId: filmId.toString()}));}}>
+      onClick={handleSetfavorite}>
       {
         isFavorite ?
           (<span>✓</span>) :

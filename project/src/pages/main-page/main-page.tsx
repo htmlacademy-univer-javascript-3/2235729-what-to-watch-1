@@ -1,19 +1,27 @@
 import FilmsList from '../../components/films-list/films-list';
 import GenreList from '../../components/genre-list/genre-list';
-import {useAppSelector} from '../../hooks';
+import {useAppSelector, useAppDispatch} from '../../hooks';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import {ReducerName} from '../../types/reducerName';
-import React from 'react';
+import React, {useEffect} from 'react';
 import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
-
+import {fetchPromo} from '../../store/api-actions';
+import Loading from '../../components/loading/loading';
 
 function MainPage(): JSX.Element {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(fetchPromo());
+  }, [dispatch]);
   const films = useAppSelector((state) => state[ReducerName.Main].genreFilms);
   const promo = useAppSelector((state) => state[ReducerName.Main].promo);
-  return promo ? (
+  if (promo === null) {
+    return (<Loading />);
+  }
+  return (
     <>
       <section className="film-card">
         <div className="film-card__bg">
@@ -41,7 +49,7 @@ function MainPage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={promo.id}/>
-                <AddMyListButton filmId={promo.id}/>
+                <AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite} isPromo/>
               </div>
             </div>
           </div>
@@ -60,7 +68,7 @@ function MainPage(): JSX.Element {
         <Footer />
       </div>
     </>
-  ) : (<React.Fragment />);
+  );
 }
 
 export default MainPage;
