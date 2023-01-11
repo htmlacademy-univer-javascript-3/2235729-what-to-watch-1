@@ -1,17 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link, Navigate, useParams} from 'react-router-dom';
-import Film from '../../types/film';
 import СommentSubmissionForm from '../../components/сomment-submission-form/сomment-submission-form';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
-import {useAppSelector} from '../../hooks';
+import {useAppSelector, useAppDispatch} from '../../hooks';
+import {ReducerName} from '../../types/reducerName';
+import {fetchFilm} from '../../store/api-actions';
 
 
 function AddReviewPage(): JSX.Element {
   const id = Number(useParams().id);
-  const films = useAppSelector((state) => state.allFilms);
-  const film = films.find((f) => f.id === id);
+  const dispatch = useAppDispatch();
 
+  useEffect(() => {
+    dispatch(fetchFilm(id.toString()));
+  }, [id, dispatch]);
+
+  const film = useAppSelector((state) => state[ReducerName.Film].film);
   return film ? (
     <section className="film-card film-card--full">
       <div className="film-card__header">

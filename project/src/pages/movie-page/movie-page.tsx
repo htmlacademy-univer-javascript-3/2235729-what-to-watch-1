@@ -1,35 +1,28 @@
-import {Navigate, useParams} from 'react-router-dom';
-import Film from '../../types/film';
+import {useParams} from 'react-router-dom';
+import {useEffect} from 'react';
 import FilmsList from '../../components/films-list/films-list';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
-import {useAppSelector} from '../../hooks';
-
-
-function getRatingLevel(rating: number) {
-  if (rating <= 3) {
-    return 'Bad';
-  }
-  if ((5 >= rating) && (rating > 3)) {
-    return 'Normal';
-  }
-  if ((8 >= rating) && (rating > 5)) {
-    return 'Good';
-  }
-  if ((10 > rating) && (rating > 8)) {
-    return 'Very good';
-  }
-  if (rating === 10) {
-    return 'Awesome';
-  }
-}
+import {useAppSelector, useAppDispatch} from '../../hooks';
+import MoviePageTabs from '../../components/movie-page-tabs/movie-page-tabs';
+import {ReducerName} from '../../types/reducerName';
+import {fetchSimilar, fetchReviews, fetchFilm} from '../../store/api-actions';
+import NotFoundPage from '../not-found-page/not-found-page';
 
 
 function MoviePage(): JSX.Element {
   const id = Number(useParams().id);
-  const films = useAppSelector((state) => state.allFilms);
-  const film = films.find((f) => f.id === id);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFilm(id.toString()));
+    dispatch(fetchSimilar(id.toString()));
+    dispatch(fetchReviews(id.toString()));
+  }, [id, dispatch]);
+
+  const film = useAppSelector((state) => state[ReducerName.Film].film);
+  const reviews = useAppSelector((state) => state[ReducerName.Film].reviews);
   return film ? (
     <>
       <section className="film-card film-card--full">
@@ -81,41 +74,7 @@ function MoviePage(): JSX.Element {
                 width="218" height="327"
               />
             </div>
-
-            <div className="film-card__desc">
-              <nav className="film-nav film-card__nav">
-                <ul className="film-nav__list">
-                  <li className="film-nav__item film-nav__item--active">
-                    <a href="/#" className="film-nav__link">Overview</a>
-                  </li>
-                  <li className="film-nav__item">
-                    <a href="/#" className="film-nav__link">Details</a>
-                  </li>
-                  <li className="film-nav__item">
-                    <a href="/#" className="film-nav__link">Reviews</a>
-                  </li>
-                </ul>
-              </nav>
-
-              <div className="film-rating">
-                <div className="film-rating__score">{film.rating}</div>
-                <p className="film-rating__meta">
-                  <span className="film-rating__level">{getRatingLevel(film.rating)}</span>
-                  <span className="film-rating__count">240 ratings</span>
-                </p>
-              </div>
-
-              <div className="film-card__text">
-                <p>{film.description}</p>
-
-                <p className="film-card__director"><strong>Director: {film.director}</strong></p>
-
-                <p className="film-card__starring">
-                  <strong>Starring: {film.starring.join(' ')} and other
-                  </strong>
-                </p>
-              </div>
-            </div>
+            <MoviePageTabs film={film} reviews={reviews}/>
           </div>
         </div>
       </section>
@@ -129,7 +88,7 @@ function MoviePage(): JSX.Element {
         <Footer />
       </div>
     </>
-  ) : <Navigate to={'/*'}/>;
+  ) : <NotFoundPage />;
 }
 
 export default MoviePage;

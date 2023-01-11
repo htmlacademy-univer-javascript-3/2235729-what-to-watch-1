@@ -1,13 +1,19 @@
-import React from 'react';
-import Film from '../../types/film';
+import React, {useEffect} from 'react';
 import {Link, useParams, Navigate} from 'react-router-dom';
-import {useAppSelector} from '../../hooks';
+import {useAppSelector, useAppDispatch} from '../../hooks';
+import {fetchFilm} from '../../store/api-actions';
+import {ReducerName} from '../../types/reducerName';
 
 
 function Player(): JSX.Element{
-  const films = useAppSelector((state) => state.allFilms);
   const id = Number(useParams().id);
-  const film = films.find((f) => f.id === id);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFilm(id.toString()));
+  }, [id, dispatch]);
+
+  const film = useAppSelector((state) => state[ReducerName.Film].film);
   return film ? (
     <div className='player'>
       <video src={film.videoLink} className='player__video' poster={film.posterImage}></video>

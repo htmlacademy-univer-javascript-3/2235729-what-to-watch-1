@@ -5,13 +5,14 @@ import {login} from '../../store/api-actions';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {Navigate} from 'react-router-dom';
 import AuthorizationStatus from '../../types/authorizationStatus';
+import {ReducerName} from '../../types/reducerName';
 
 
 function SignIn(): JSX.Element {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useAppDispatch();
-  const authStatus = useAppSelector((state) => state.authorizationStatus);
+  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     dispatch(login({email: email, password: password}));
