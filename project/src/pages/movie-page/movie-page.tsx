@@ -9,6 +9,8 @@ import MoviePageTabs from '../../components/movie-page-tabs/movie-page-tabs';
 import {ReducerName} from '../../types/reducerName';
 import {fetchSimilar, fetchReviews, fetchFilm} from '../../store/api-actions';
 import NotFoundPage from '../not-found-page/not-found-page';
+import PlayButton from '../../components/play-button/play-button';
+import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
 
 
 function MoviePage(): JSX.Element {
@@ -23,6 +25,9 @@ function MoviePage(): JSX.Element {
 
   const film = useAppSelector((state) => state[ReducerName.Film].film);
   const reviews = useAppSelector((state) => state[ReducerName.Film].reviews);
+  const similar = useAppSelector((state) => state[ReducerName.Film].similar);
+  const favoriteCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
+
   return film ? (
     <>
       <section className="film-card film-card--full">
@@ -35,7 +40,6 @@ function MoviePage(): JSX.Element {
 
           <header className="page-header film-card__head">
             <Logo />
-
             <UserBlock />
           </header>
 
@@ -48,19 +52,8 @@ function MoviePage(): JSX.Element {
               </p>
 
               <div className="film-card__buttons">
-                <button className="btn btn--play film-card__button" type="button">
-                  <svg viewBox="0 0 19 19" width="19" height="19">
-                    <use xlinkHref="#play-s"></use>
-                  </svg>
-                  <span>Play</span>
-                </button>
-                <button className="btn btn--list film-card__button" type="button">
-                  <svg viewBox="0 0 19 20" width="19" height="20">
-                    <use xlinkHref="#add"></use>
-                  </svg>
-                  <span>My list</span>
-                  <span className="film-card__count">9</span>
-                </button>
+                <PlayButton filmId={film.id}/>
+                <AddMyListButton filmId={film.id} isFavorite={film.isFavorite}/>
                 <a href="add-review.html" className="btn film-card__button">Add review</a>
               </div>
             </div>
@@ -82,7 +75,7 @@ function MoviePage(): JSX.Element {
       <div className="page-content">
         <section className="catalog catalog--like-this">
           <h2 className="catalog__title">More like this</h2>
-          <FilmsList films={[]}/>
+          <FilmsList films={similar}/>
         </section>
 
         <Footer />
