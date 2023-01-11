@@ -6,18 +6,17 @@ import {FormEvent} from 'react';
 type AddMyListButtonProps = {
   filmId: number;
   isFavorite: boolean;
-  isPromo: boolean;
 }
 
-function AddMyListButton({filmId, isFavorite, isPromo}: AddMyListButtonProps): JSX.Element {
+function AddMyListButton({filmId, isFavorite}: AddMyListButtonProps): JSX.Element {
   const myFilmsCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
   const dispatch = useAppDispatch();
-  
+
   function handleSetfavorite(event: FormEvent<HTMLButtonElement>) {
     event.preventDefault();
     dispatch(setFavorite({status: !isFavorite, filmId: filmId.toString()}));
   }
-  
+
   return (
     <button className="btn btn--list film-card__button" type="button"
       onClick={handleSetfavorite}>

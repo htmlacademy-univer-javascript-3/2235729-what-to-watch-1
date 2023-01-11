@@ -1,4 +1,4 @@
-import FilmsList from '../../components/films-list/films-list';
+import ShowMoreFilmsList from '../../components/show-more-films-list/show-more-films-list';
 import GenreList from '../../components/genre-list/genre-list';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import Footer from '../../components/footer/footer';
@@ -49,7 +49,7 @@ function MainPage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={promo.id}/>
-                <AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite} isPromo/>
+                <AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite}/>
               </div>
             </div>
           </div>
@@ -60,10 +60,7 @@ function MainPage(): JSX.Element {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
           <GenreList />
-          <FilmsList films={films}/>
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">Show more</button>
-          </div>
+          <ShowMoreFilmsList films={films}/>
         </section>
         <Footer />
       </div>

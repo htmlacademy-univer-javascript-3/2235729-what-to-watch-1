@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/loading/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/show-more-films-list/show-more-films-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/add-my-list-button/add-my-list-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/add-my-list-button/add-my-list-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/api-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/api-actions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +107,7 @@
       <workItem from="1670416482884" duration="3286000" />
       <workItem from="1673172299388" duration="10367000" />
       <workItem from="1673380300216" duration="153000" />
-      <workItem from="1673381032963" duration="22205000" />
+      <workItem from="1673381032963" duration="24141000" />
     </task>
     <servers />
   </component>
