@@ -4,14 +4,16 @@ import {useAppSelector} from '../../hooks';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
+import {ReducerName} from '../../types/reducerName';
+import React from 'react';
 
 
 function MainPage(): JSX.Element {
-  const films = useAppSelector((state) => state.genreFilms);
-  const promoMovie = useAppSelector((state) => state.promoMovie);
-  const myFilmsCount = useAppSelector((state) => state.favoriteFilms).length;
+  const films = useAppSelector((state) => state[ReducerName.Main].genreFilms);
+  const promoMovie = useAppSelector((state) => state[ReducerName.Main].promo);
+  const myFilmsCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
   if (promoMovie === null) {
-    return <></>
+    return (<React.Fragment />);
   }
   return (
     <>
@@ -28,7 +30,7 @@ function MainPage(): JSX.Element {
           <div className="film-card__info">
             <div className="film-card__poster">
               <img src={promoMovie.posterImage} alt={`${promoMovie.name} poster`}
-                   width="218" height="327"
+                width="218" height="327"
               />
             </div>
 

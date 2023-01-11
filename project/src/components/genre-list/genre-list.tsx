@@ -2,8 +2,10 @@ import Genre from '../../types/genre';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {setGenre} from '../../store/actions';
 import {FormEvent} from 'react';
+import {ReducerName} from '../../types/reducerName';
+
 function GenreList(): JSX.Element {
-  const currentGenre = useAppSelector((state) => state.genre);
+  const currentGenre = useAppSelector((state) => state[ReducerName.Main].currentGenre);
   const dispatch = useAppDispatch();
   function GetGenres() {
     const genres: string[] = [];
