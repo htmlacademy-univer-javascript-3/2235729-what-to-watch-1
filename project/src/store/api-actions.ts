@@ -4,6 +4,7 @@ import {AxiosInstance} from 'axios';
 import Film from '../types/film';
 import Review from '../types/review';
 import User from '../types/user';
+import {ReducerName} from '../types/reducerName';
 
 
 export const fetchFilms = createAsyncThunk<Film[], undefined, {
@@ -119,8 +120,12 @@ export const setFavorite = createAsyncThunk<Film, {status: boolean; filmId: stri
   extra: AxiosInstance;
 }>(
   '/favorite/id/status',
-  async ({status, filmId}, {dispatch, extra: api}) => {
+  async ({status, filmId}, {dispatch, getState, extra: api}) => {
     const {data} = await api.post<Film>(`/favorite/${filmId}/${status ? 1 : 0}`);
+    const state = getState();
+    if (state[ReducerName.Main].promo?.id.toString() === filmId) {
+      dispatch(fetchPromo());
+    }
     dispatch(fetchFavoriteFilms());
     return data;
   },
