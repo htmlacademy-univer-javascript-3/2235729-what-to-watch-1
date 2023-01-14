@@ -1,11 +1,14 @@
 import React, {useEffect} from 'react';
-import {Link, Navigate, useParams} from 'react-router-dom';
+import {Link, useParams, Navigate} from 'react-router-dom';
 import СommentSubmissionForm from '../../components/сomment-submission-form/сomment-submission-form';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import {ReducerName} from '../../types/reducerName';
 import {fetchFilm} from '../../store/api-actions';
+import NotfoundPage from '../not-found-page/not-found-page';
+import Loading from '../../components/loading/loading';
+import AuthorizationStatus from '../../types/authorizationStatus';
 
 
 function AddReviewPage(): JSX.Element {
@@ -17,6 +20,17 @@ function AddReviewPage(): JSX.Element {
   }, [id, dispatch]);
 
   const film = useAppSelector((state) => state[ReducerName.Film].film);
+  const isLoading = useAppSelector((state) => state[ReducerName.Film].isLoading);
+  const isAuthorized = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus) === AuthorizationStatus.AUTHORIZED;
+
+  if (!isAuthorized) {
+    return (<Navigate to={'/login'}/>);
+  }
+
+  if (isLoading) {
+    return (<Loading />);
+  }
+
   return film ? (
     <section className="film-card film-card--full">
       <div className="film-card__header">
@@ -34,7 +48,7 @@ function AddReviewPage(): JSX.Element {
                 <Link to={`/films/${id}`} className="breadcrumbs__link">{film.name}</Link>
               </li>
               <li className="breadcrumbs__item">
-                <a className="breadcrumbs__link" href="/#">Add review</a>
+                <Link to="review" className="breadcrumbs__link">Add review</Link>
               </li>
             </ul>
           </nav>
@@ -47,9 +61,8 @@ function AddReviewPage(): JSX.Element {
           />
         </div>
       </div>
-      <СommentSubmissionForm />
-    </section>)
-    : <Navigate to={'/*'}/>;
+      <СommentSubmissionForm filmId={id.toString()}/>
+    </section>) : <NotfoundPage />;
 }
 
 export default AddReviewPage;

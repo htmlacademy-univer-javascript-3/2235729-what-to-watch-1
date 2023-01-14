@@ -6,7 +6,7 @@ import {
   setFavorite,
   fetchReviews,
   fetchFilm,
-  fetchSimilar,
+  fetchSimilar
 } from '../api-actions';
 
 type State = {

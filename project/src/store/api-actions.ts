@@ -131,3 +131,13 @@ export const setFavorite = createAsyncThunk<Film, {status: boolean; filmId: stri
   },
 );
 
+export const addReview = createAsyncThunk<void, {comment: string; rating: number; filmId: string}, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  '/comments/id',
+  async ({comment, rating, filmId}, {dispatch, getState, extra: api}) => {
+    await api.post(`/comments/${filmId}`, {comment, rating});
+  },
+);

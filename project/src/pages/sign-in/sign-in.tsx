@@ -33,13 +33,13 @@ function SignIn(): JSX.Element {
         <form onSubmit={handleSubmit} className="sign-in__form">
           <div className="sign-in__fields">
             <div className="sign-in__field">
-              <input className="sign-in__input" type="email" placeholder="Email address" name="user-email"
+              <input className="sign-in__input" type="email" placeholder="Email address" name="user-email" required
                 id="user-email" onChange={(e) => setEmail(e.target.value)}
               />
               <label className="sign-in__label visually-hidden" form="user-email">Email address</label>
             </div>
             <div className="sign-in__field">
-              <input className="sign-in__input" type="password" placeholder="Password" name="user-password"
+              <input className="sign-in__input" type="password" placeholder="Password" name="user-password" required
                 id="user-password" onChange={(e) => setPassword(e.target.value)}
               />
               <label className="sign-in__label visually-hidden" form="user-password">Password</label>
