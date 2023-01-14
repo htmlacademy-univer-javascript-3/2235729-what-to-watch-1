@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import React, {useEffect} from 'react';
 import FilmsList from '../../components/films-list/films-list';
 import Footer from '../../components/footer/footer';
@@ -12,6 +12,7 @@ import NotFoundPage from '../not-found-page/not-found-page';
 import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
 import AuthorizationStatus from '../../types/authorizationStatus';
+import Loading from '../../components/loading/loading';
 
 
 function MoviePage(): JSX.Element {
@@ -28,6 +29,11 @@ function MoviePage(): JSX.Element {
   const reviews = useAppSelector((state) => state[ReducerName.Film].reviews);
   const similar = useAppSelector((state) => state[ReducerName.Film].similar);
   const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
+  const isLoading = useAppSelector((state) => state[ReducerName.Film].isLoading);
+
+  if (isLoading) {
+    return (<Loading />);
+  }
 
   return film ? (
     <>
@@ -56,9 +62,8 @@ function MoviePage(): JSX.Element {
                 <PlayButton filmId={film.id}/>
                 <AddMyListButton filmId={film.id} isFavorite={film.isFavorite} />
                 {
-                  authStatus === AuthorizationStatus.AUTHORIZED ?
-                    (<a href="add-review.html" className="btn film-card__button">Add review</a>) :
-                    (<React.Fragment />)
+                  authStatus === AuthorizationStatus.AUTHORIZED &&
+                  (<Link to="review" className="btn film-card__button">Add review</Link>)
                 }
               </div>
             </div>

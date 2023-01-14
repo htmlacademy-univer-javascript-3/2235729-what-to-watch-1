@@ -1,8 +1,9 @@
 
 function Loading(): JSX.Element {
   return (
-    <div>
-    </div>);
+    <h1>
+      Loading...
+    </h1>);
 }
 
 export default Loading;

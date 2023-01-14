@@ -4,6 +4,12 @@ type ReviewsProps = {
   reviews: Review[];
 }
 
+
+function getDateString(date: Date) {
+  return `${date.toLocaleString('eng', {month: 'long'})} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
+
 function Reviews({reviews}: ReviewsProps): JSX.Element {
   function Column({columnReviews}: {columnReviews: Review[]}): JSX.Element {
     return (
@@ -16,7 +22,7 @@ function Reviews({reviews}: ReviewsProps): JSX.Element {
 
                 <footer className="review__details">
                   <cite className="review__author">{review.user.name}</cite>
-                  <time className="review__date" dateTime={review.date}>{review.date}</time>
+                  <time className="review__date" dateTime={review.date}>{getDateString(new Date(review.date))}</time>
                 </footer>
               </blockquote>
 

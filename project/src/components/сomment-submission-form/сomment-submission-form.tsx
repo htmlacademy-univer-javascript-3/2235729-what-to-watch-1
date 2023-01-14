@@ -1,14 +1,32 @@
 import {ChangeEvent, useState, Fragment} from 'react';
+import {FormEvent} from 'react';
+import {useAppDispatch} from '../../hooks';
+import {addReview} from '../../store/api-actions';
 
 
-function СommentSubmissionForm(): JSX.Element {
-  const [review, setReview] = useState({ rating: 0, review: '' });
-  const textChangeHandler = (evt: ChangeEvent<HTMLTextAreaElement>) => setReview({ ...review, [evt.target.name]: evt.target.value });
-  const ratingChangeHandler = (evt: ChangeEvent<HTMLInputElement>) => setReview({ ...review, [evt.target.name]: evt.target.value });
+type CommentSubmissionProps = {
+  filmId: string;
+}
+
+function СommentSubmissionForm({filmId}: CommentSubmissionProps): JSX.Element {
+  const [review, setReview] = useState('');
+  const [rating, setRating] = useState(0);
+  const dispatch = useAppDispatch();
+
+  const textChangeHandler = (event: ChangeEvent<HTMLTextAreaElement>) =>
+    setReview(event.target.value);
+  const ratingChangeHandler = (event: ChangeEvent<HTMLInputElement>) =>
+    setRating(Number(event.target.value));
+
+  function postReviewHandler(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    dispatch(addReview({filmId: filmId, rating: rating, comment: review}));
+  }
+
 
   return (
     <div className="add-review">
-      <form action="#" className="add-review__form">
+      <form className="add-review__form" onSubmit={postReviewHandler}>
         <div className="rating">
           <div className="rating__stars">
             {[10, 9, 8, 7, 6, 5, 4, 3, 2, 1].map((num) => (
@@ -34,7 +52,7 @@ function СommentSubmissionForm(): JSX.Element {
             name="review-text"
             id="review-text"
             placeholder={'Review Text'}
-            value={review.review}
+            value={review}
             onChange={textChangeHandler}
           />
           <div className="add-review__submit">

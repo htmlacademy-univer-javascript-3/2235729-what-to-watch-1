@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4897752e-cc2d-45c9-83a1-aeea5533cc08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/show-more-films-list/show-more-films-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/add-my-list-button/add-my-list-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/add-my-list-button/add-my-list-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/details/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/details/details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/loading/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/loading/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/reviews/reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/reviews/reviews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/show-more-films-list/show-more-films-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/show-more-films-list/show-more-films-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/сomment-submission-form/сomment-submission-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/сomment-submission-form/сomment-submission-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/add-review-page/add-review-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/api-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/api-actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/filmReducer/filmReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/filmReducer/filmReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +113,9 @@
       <workItem from="1670416482884" duration="3286000" />
       <workItem from="1673172299388" duration="10367000" />
       <workItem from="1673380300216" duration="153000" />
-      <workItem from="1673381032963" duration="24141000" />
+      <workItem from="1673381032963" duration="27019000" />
+      <workItem from="1673645181899" duration="1178000" />
+      <workItem from="1673726491644" duration="3913000" />
     </task>
     <servers />
   </component>
