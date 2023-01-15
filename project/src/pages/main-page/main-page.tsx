@@ -10,6 +10,7 @@ import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
 import {fetchPromo} from '../../store/api-actions';
 import Loading from '../../components/loading/loading';
+import AuthorizationStatus from '../../types/authorizationStatus';
 
 function MainPage(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -18,6 +19,7 @@ function MainPage(): JSX.Element {
   }, [dispatch]);
   const films = useAppSelector((state) => state[ReducerName.Main].genreFilms);
   const promo = useAppSelector((state) => state[ReducerName.Main].promo);
+  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
   if (promo === null) {
     return (<Loading />);
   }
@@ -49,7 +51,10 @@ function MainPage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={promo.id}/>
-                <AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite}/>
+                {
+                  authStatus === AuthorizationStatus.AUTHORIZED &&
+                  (<AddMyListButton filmId={promo.id} isFavorite={promo.isFavorite}/>)
+                }
               </div>
             </div>
           </div>

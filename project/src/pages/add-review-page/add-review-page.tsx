@@ -6,7 +6,7 @@ import UserBlock from '../../components/user-block/user-block';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import {ReducerName} from '../../types/reducerName';
 import {fetchFilm} from '../../store/api-actions';
-import NotfoundPage from '../not-found-page/not-found-page';
+import NotFoundPage from '../not-found-page/not-found-page';
 import Loading from '../../components/loading/loading';
 import AuthorizationStatus from '../../types/authorizationStatus';
 
@@ -21,9 +21,13 @@ function AddReviewPage(): JSX.Element {
 
   const film = useAppSelector((state) => state[ReducerName.Film].film);
   const isLoading = useAppSelector((state) => state[ReducerName.Film].isLoading);
-  const isAuthorized = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus) === AuthorizationStatus.AUTHORIZED;
+  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
 
-  if (!isAuthorized) {
+  if (authStatus === AuthorizationStatus.IN_PROCESS) {
+    return (<Loading />);
+  }
+
+  if (authStatus === AuthorizationStatus.NOT_AUTHORIZED) {
     return (<Navigate to={'/login'}/>);
   }
 
@@ -62,7 +66,7 @@ function AddReviewPage(): JSX.Element {
         </div>
       </div>
       <СommentSubmissionForm filmId={id.toString()}/>
-    </section>) : <NotfoundPage />;
+    </section>) : <NotFoundPage />;
 }
 
 export default AddReviewPage;
