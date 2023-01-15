@@ -60,10 +60,12 @@ function MoviePage(): JSX.Element {
 
               <div className="film-card__buttons">
                 <PlayButton filmId={film.id}/>
-                <AddMyListButton filmId={film.id} isFavorite={film.isFavorite} />
                 {
-                  authStatus === AuthorizationStatus.AUTHORIZED &&
-                  (<Link to="review" className="btn film-card__button">Add review</Link>)
+                  authStatus === AuthorizationStatus.AUTHORIZED && (
+                    <>
+                      <AddMyListButton filmId={film.id} isFavorite={film.isFavorite} />
+                      <Link to="review" className="btn film-card__button">Add review</Link>
+                    </>)
                 }
               </div>
             </div>
