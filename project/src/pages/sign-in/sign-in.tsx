@@ -6,6 +6,7 @@ import {useAppDispatch, useAppSelector} from '../../hooks';
 import {Navigate} from 'react-router-dom';
 import AuthorizationStatus from '../../types/authorization-status';
 import {ReducerName} from '../../types/reducer-name';
+import {errorHandle} from '../../services/error-handle';
 
 
 function SignIn(): JSX.Element {
@@ -15,7 +16,11 @@ function SignIn(): JSX.Element {
   const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    dispatch(login({email: email, password: password}));
+    if (/[a-z]/i.test(password) && /[0-9]/.test(password)) {
+      dispatch(login({email: email, password: password}));
+    } else {
+      errorHandle('Passwords must contain: a minimum of 1 letter and a minimum of 1 numeric character');
+    }
   }
 
   if (authStatus === AuthorizationStatus.AUTHORIZED) {

@@ -19,11 +19,13 @@ function SmallFilmCard({isHovered, srcImg, srcPreviewVideo, id, mouseLeaveHandle
   return (
     <article className="small-film-card catalog__films-card" onMouseOver={mouseOverHandler} onMouseLeave={mouseLeaveHandler}>
       <div className="small-film-card__image">
-        {
-          isHovered
-            ? <PreviewVideoPlayer posterImage={srcImg} previewVideoSrc={srcPreviewVideo} width={smallCardWidth} height={smallCardHeight}/>
-            : <img src={srcImg} alt={title} width={smallCardWidth} height={smallCardHeight}/>
-        }
+        <Link to={`/films/${id}`}>
+          {
+            isHovered
+              ? <PreviewVideoPlayer posterImage={srcImg} previewVideoSrc={srcPreviewVideo} width={smallCardWidth} height={smallCardHeight}/>
+              : <img src={srcImg} alt={title} width={smallCardWidth} height={smallCardHeight}/>
+          }
+        </Link>
       </div>
       <h3 className="small-film-card__title">
         <Link className="small-film-card__link" to={`/films/${id}`}>{title}</Link>

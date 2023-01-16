@@ -31,12 +31,13 @@ function Player(): JSX.Element{
 
   function getTimeLeft() {
     if (film === null) {
-      return '00:00';
+      return '00:00:00';
     }
     const timeLeft = film.runTime * 60 - viewedTime;
-    return [Math.floor(timeLeft / 3600),
-      Math.floor((timeLeft / 60) % 60).toString().padStart(2, '0')]
-      .join(':');
+    const hours = Math.floor(timeLeft / 3600).toString().padStart(2, '0');
+    const minutes = Math.floor((timeLeft / 60) % 60).toString().padStart(2, '0');
+    const seconds = Math.floor((timeLeft % 60)).toString().padStart(2, '0');
+    return (hours !== '00') ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`;
   }
 
   if (isLoading) {
