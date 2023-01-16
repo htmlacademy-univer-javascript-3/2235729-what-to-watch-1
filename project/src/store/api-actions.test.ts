@@ -9,7 +9,7 @@ import { State } from '../types/state';
 import { setFavorite, checkAuth, fetchReviews, fetchFavoriteFilms, fetchFilm, fetchFilms, fetchPromo, fetchSimilar, login, logout, addReview } from './api-actions';
 import AuthorizationData from '../types/authorization-data';
 
-//jest.mock('../services/process-error-handle.ts');
+jest.mock('../services/error-handle.ts');
 
 describe('async actions', () => {
   const api = createAPI();

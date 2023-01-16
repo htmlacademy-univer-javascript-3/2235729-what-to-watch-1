@@ -4,9 +4,7 @@ import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import {ReducerName} from '../../types/reducer-name';
-import AuthorizationStatus from '../../types/authorization-status';
 import {fetchFavoriteFilms} from '../../store/api-actions';
-import {Navigate} from 'react-router-dom';
 import {useEffect} from 'react';
 
 
@@ -14,12 +12,8 @@ function MyList(): JSX.Element{
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchFavoriteFilms());
-  }, []);
+  }, [dispatch]);
   const favoriteFilms = useAppSelector((state) => state[ReducerName.Main].favoriteFilms);
-  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
-  if (authStatus === AuthorizationStatus.NOT_AUTHORIZED) {
-    return (<Navigate to="/login" />);
-  }
 
   return (
     <div className="user-page">

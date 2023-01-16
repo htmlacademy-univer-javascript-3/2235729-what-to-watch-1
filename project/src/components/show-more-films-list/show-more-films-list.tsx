@@ -21,7 +21,9 @@ function ShowMoreFilmsList({films}: ShowMoreFilmsListProps): JSX.Element {
       {
         (showCount < films.length) && (
           <div className="catalog__more">
-            <button className="catalog__button" type="button" onClick={addShowCountHandle}>Show more</button>
+            <button className="catalog__button" type="button" onClick={addShowCountHandle} data-testid="show-more">
+              Show more
+            </button>
           </div>)
       }
     </>);

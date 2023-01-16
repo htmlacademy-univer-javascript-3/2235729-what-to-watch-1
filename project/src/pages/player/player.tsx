@@ -60,7 +60,7 @@ function Player(): JSX.Element{
       <div className='player__controls'>
         <div className='player__controls-row'>
           <div className='player__time'>
-            <progress className='player__progress' value={viewedTime / 60} max={film.runTime}></progress>
+            <progress className='player__progress' value={viewedTime / 60} max={film.runTime}/>
             <div className='player__toggler' style={{left: `${(viewedTime / (film.runTime * 60)) * 100}%`}}>Toggler</div>
           </div>
           <div className='player__time-value'>
@@ -73,13 +73,13 @@ function Player(): JSX.Element{
             isPlaying ? (
               <button type="button" className="player__play" onClick={() => {playerRef.current.pause();}}>
                 <svg viewBox="0 0 14 21" width="14" height="21">
-                  <use xlinkHref="#pause"></use>
+                  <use xlinkHref="#pause"/>
                 </svg>
                 <span>Pause</span>
               </button>) : (
               <button type='button' className='player__play' onClick={() => {playerRef.current.play();}}>
                 <svg viewBox='0 0 19 19' width='19' height='19'>
-                  <use xlinkHref='#play-s'></use>
+                  <use xlinkHref='#play-s'/>
                 </svg>
                 <span>Play</span>
               </button>)
@@ -94,7 +94,7 @@ function Player(): JSX.Element{
             }}
           >
             <svg viewBox='0 0 27 27' width='27' height='27'>
-              <use xlinkHref='#full-screen'></use>
+              <use xlinkHref='#full-screen'/>
             </svg>
             <span>Full screen</span>
           </button>

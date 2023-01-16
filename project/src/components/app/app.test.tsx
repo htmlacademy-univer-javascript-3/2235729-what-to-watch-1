@@ -9,11 +9,11 @@ import films from '../../mocks/films';
 import { createAPI } from '../../services/api';
 import { State } from '../../types/state';
 import AuthorizationStatus from '../../types/authorization-status';
-//import ErrorMessage from '../error-message/error-message';
+import Error from '../error/error';
 import App from './app';
 import {ReducerName} from '../../types/reducer-name';
 
-//jest.mock('../../services/process-error-handle.ts');
+jest.mock('../../services/error-handle.ts');
 const api = createAPI();
 const middlewares = [thunk.withExtraArgument(api)];
 const mockStore = configureMockStore<
@@ -52,6 +52,7 @@ describe('logged in routing', () => {
   const fakeApp = (
     <Provider store={store}>
       <MemoryRouter initialEntries={routes}>
+        <Error />
         <App />
       </MemoryRouter>
     </Provider>
@@ -138,6 +139,7 @@ describe('not logged in routing', () => {
   const fakeApp = (
     <Provider store={store}>
       <MemoryRouter initialEntries={routes}>
+        <Error />
         <App />
       </MemoryRouter>
     </Provider>

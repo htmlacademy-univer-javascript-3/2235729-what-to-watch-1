@@ -26,10 +26,10 @@ function App(): JSX.Element {
     <Routes>
       <Route path="/" element={(<MainPage />)}/>
       <Route path='login' element={<SignIn />}/>
-      <Route path='mylist' element={<PrivateRoute navigateTo={<MyList />} />}/>
+      <Route path='mylist' element={<PrivateRoute><MyList /></PrivateRoute>}/>
       <Route path='films/:id/'>
         <Route index element={<MoviePage />} />
-        <Route path='review' element={<AddReviewPage />}/>
+        <Route path='review' element={<PrivateRoute><AddReviewPage /></PrivateRoute>}/>
       </Route>
       <Route path='player/:id' element={<Player />}/>
       <Route path='*' element={<NotFoundPage/>}/>

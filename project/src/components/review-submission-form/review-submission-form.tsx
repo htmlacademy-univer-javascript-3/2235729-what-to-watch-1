@@ -2,16 +2,23 @@ import {ChangeEvent, useState, Fragment} from 'react';
 import {FormEvent} from 'react';
 import {useAppDispatch} from '../../hooks';
 import {addReview} from '../../store/api-actions';
+import {useNavigate} from 'react-router-dom';
+import {errorHandle} from '../../services/error-handle';
 
 
 type ReviewSubmissionProps = {
   filmId: string;
 }
 
+const MAX_LEN_REVIEW = 400;
+const MIN_LEN_REVIEW = 50;
+
 function ReviewSubmissionForm({filmId}: ReviewSubmissionProps): JSX.Element {
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(0);
+  const [isDisabled, setIsDisabled] = useState(false);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const textChangeHandler = (event: ChangeEvent<HTMLTextAreaElement>) =>
     setReview(event.target.value);
@@ -20,7 +27,16 @@ function ReviewSubmissionForm({filmId}: ReviewSubmissionProps): JSX.Element {
 
   function postReviewHandler(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    dispatch(addReview({filmId: filmId, rating: rating, comment: review}));
+    dispatch(addReview({filmId: filmId, rating: rating, comment: review}))
+      .then(() => {
+        setIsDisabled(false);
+        navigate(`/films/${filmId}`);
+      })
+      .catch((err) => {
+        setIsDisabled(false);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/restrict-template-expressions
+        errorHandle(`Can't post: ${err.message.toString()}`);
+      });
   }
 
 
@@ -56,7 +72,11 @@ function ReviewSubmissionForm({filmId}: ReviewSubmissionProps): JSX.Element {
             onChange={textChangeHandler}
           />
           <div className="add-review__submit">
-            <button className="add-review__btn" type="submit">Post</button>
+            <button className="add-review__btn" type="submit"
+              disabled={review.length < MIN_LEN_REVIEW || review.length > MAX_LEN_REVIEW || isDisabled || rating === 0}
+            >
+              Post
+            </button>
           </div>
         </div>
       </form>

@@ -3,5 +3,5 @@ import {setError} from '../store/actions';
 
 export const errorHandle = (message: string): void => {
   store.dispatch(setError(message));
-  setTimeout(() => store.dispatch(setError(null)), 1000);
+  setTimeout(() => store.dispatch(setError(null)), 3000);
 };

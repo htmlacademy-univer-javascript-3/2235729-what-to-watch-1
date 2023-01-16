@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Link, useParams, Navigate} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import СommentSubmissionForm from '../../components/review-submission-form/review-submission-form';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
@@ -8,7 +8,6 @@ import {ReducerName} from '../../types/reducer-name';
 import {fetchFilm} from '../../store/api-actions';
 import NotFoundPage from '../not-found-page/not-found-page';
 import Loading from '../../components/loading/loading';
-import AuthorizationStatus from '../../types/authorization-status';
 
 
 function AddReviewPage(): JSX.Element {
@@ -21,15 +20,6 @@ function AddReviewPage(): JSX.Element {
 
   const film = useAppSelector((state) => state[ReducerName.Film].film);
   const isLoading = useAppSelector((state) => state[ReducerName.Film].isLoading);
-  const authStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
-
-  if (authStatus === AuthorizationStatus.IN_PROCESS) {
-    return (<Loading />);
-  }
-
-  if (authStatus === AuthorizationStatus.NOT_AUTHORIZED) {
-    return (<Navigate to={'/login'}/>);
-  }
 
   if (isLoading) {
     return (<Loading />);
