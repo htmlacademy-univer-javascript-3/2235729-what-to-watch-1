@@ -4,6 +4,6 @@ import Loading from './loading';
 describe('loading tests', () => {
   it('should render correctly', () => {
     render(<Loading />);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByTestId('loading')).toBeInTheDocument();
   });
 });
