@@ -37,7 +37,11 @@ export const createAPI = (): AxiosInstance => {
     (response) => response,
     (error: AxiosError) => {
       if (error.response && shouldDisplayError(error.response)) {
-        errorHandle(error.response.data.error);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-assignment
+        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const errorDescription: string = error.response.data.error;
+        errorHandle(errorDescription);
       }
       throw error;
     }

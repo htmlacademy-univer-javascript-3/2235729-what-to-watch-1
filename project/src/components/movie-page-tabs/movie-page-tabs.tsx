@@ -28,8 +28,8 @@ function MoviePageTabs({film, reviews}: MoviePageTabsProps): JSX.Element {
     event.preventDefault();
     setCurrentTab(event.currentTarget.id);
   }
-  
-  function TabFragment(): JSX.Element {
+
+  function TabFragment(): JSX.Element | null {
     if (currentTab === tabs.REVIEWS) {
       return (<Reviews reviews={reviews}/>);
     }
@@ -39,24 +39,24 @@ function MoviePageTabs({film, reviews}: MoviePageTabsProps): JSX.Element {
     if (currentTab === tabs.DETAILS) {
       return (<Details film={film}/>);
     }
-    return (<React.Fragment />);
+    return null;
   }
 
-  return film ? (
+  return film && (
     <div className="film-card__desc">
       <nav className="film-nav film-card__nav">
         <ul className="film-nav__list">
           {
             tabsNames.map((name) => (
               <li className={`film-nav__item${name === currentTab ? ' film-nav__item--active' : ''}`} key={name}>
-                <a className="film-nav__link" onClick={changeTabHandle} id={name}>{name}</a>
+                <a data-testid={name} className="film-nav__link" onClick={changeTabHandle} id={name} href='/#'>{name}</a>
               </li>
             ))
           }
         </ul>
       </nav>
       <TabFragment />
-    </div>) : <React.Fragment />;
+    </div>);
 }
 
 export default MoviePageTabs;

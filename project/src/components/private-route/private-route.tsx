@@ -4,12 +4,12 @@ import AuthorizationStatus from '../../types/authorization-status';
 import {ReducerName} from '../../types/reducer-name';
 
 type PrivateRouteProps = {
-  navigateTo: JSX.Element;
+  children: JSX.Element;
 };
 
-function PrivateRoute({navigateTo}: PrivateRouteProps): JSX.Element {
+function PrivateRoute({children}: PrivateRouteProps): JSX.Element {
   const authorizationStatus = useAppSelector((state) => state[ReducerName.Authorzation].authorizationStatus);
-  return authorizationStatus === AuthorizationStatus.AUTHORIZED ? navigateTo : <Navigate to={'/login'} />;
+  return authorizationStatus === AuthorizationStatus.AUTHORIZED ? children : <Navigate to={'/login'} />;
 }
 
 export default PrivateRoute;
