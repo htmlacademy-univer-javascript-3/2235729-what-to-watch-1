@@ -6,12 +6,12 @@ import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import MoviePageTabs from '../../components/movie-page-tabs/movie-page-tabs';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import {fetchSimilar, fetchReviews, fetchFilm} from '../../store/api-actions';
 import NotFoundPage from '../not-found-page/not-found-page';
 import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
-import AuthorizationStatus from '../../types/authorizationStatus';
+import AuthorizationStatus from '../../types/authorization-status';
 import Loading from '../../components/loading/loading';
 
 

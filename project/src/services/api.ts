@@ -1,12 +1,13 @@
 import axios, {AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 import { getToken } from './token';
 import {StatusCodes} from 'http-status-codes';
-//import { errorHandle } from './error-handle';
+import { errorHandle } from './error-handle';
 
 const StatusCodeMapping: Record<number, boolean> = {
   [StatusCodes.BAD_REQUEST]: true,
   [StatusCodes.UNAUTHORIZED]: true,
-  [StatusCodes.NOT_FOUND]: true
+  [StatusCodes.NOT_FOUND]: true,
+  [StatusCodes.SERVICE_UNAVAILABLE]: true
 };
 
 const shouldDisplayError = (response: AxiosResponse) => StatusCodeMapping[response.status];
@@ -36,9 +37,8 @@ export const createAPI = (): AxiosInstance => {
     (response) => response,
     (error: AxiosError) => {
       if (error.response && shouldDisplayError(error.response)) {
-        //errorHandle(error.response.data.error);
+        errorHandle(error.response.data.error);
       }
-
       throw error;
     }
   );

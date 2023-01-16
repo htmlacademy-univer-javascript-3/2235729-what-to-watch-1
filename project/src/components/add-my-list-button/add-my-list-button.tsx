@@ -1,5 +1,5 @@
 import {useAppSelector, useAppDispatch} from '../../hooks';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import {setFavorite} from '../../store/api-actions';
 import {FormEvent} from 'react';
 
@@ -9,16 +9,16 @@ type AddMyListButtonProps = {
 }
 
 function AddMyListButton({filmId, isFavorite}: AddMyListButtonProps): JSX.Element {
-  const myFilmsCount = useAppSelector((state) => state[ReducerName.Main].favoriteFilms).length;
+  const myFilmsCount = useAppSelector((state) => state[ReducerName.Main].favoriteCount);
   const dispatch = useAppDispatch();
 
-  function handleSetfavorite(event: FormEvent<HTMLButtonElement>) {
+  function handleSetFavorite(event: FormEvent<HTMLButtonElement>) {
     event.preventDefault();
     dispatch(setFavorite({status: !isFavorite, filmId: filmId.toString()}));
   }
 
   return (
-    <button className="btn btn--list film-card__button" type="button" onClick={handleSetfavorite}>
+    <button className="btn btn--list film-card__button" type="button" onClick={handleSetFavorite}>
       {
         isFavorite ?
           (<svg viewBox="0 0 19 20" width="19" height="20"><use xlinkHref="#in-list" /></svg> ) :

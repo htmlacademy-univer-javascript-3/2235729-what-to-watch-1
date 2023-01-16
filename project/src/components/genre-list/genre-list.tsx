@@ -1,7 +1,7 @@
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {setGenre} from '../../store/actions';
 import {FormEvent} from 'react';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import Genre from '../../types/genre';
 
 function GenreList(): JSX.Element {
@@ -9,7 +9,7 @@ function GenreList(): JSX.Element {
   const films = useAppSelector((state) => state[ReducerName.Main].films);
   const dispatch = useAppDispatch();
   function GetGenres() {
-    const res = Array.from(new Set(films.map((film) => film.genre)));
+    const res = Array.from(new Set(films.map((film) => film.genre))).slice(0, 9);
     return [Genre.DEFAULT_GENRE].concat(res);
   }
   function updateGenre(event: FormEvent<HTMLAnchorElement>) {

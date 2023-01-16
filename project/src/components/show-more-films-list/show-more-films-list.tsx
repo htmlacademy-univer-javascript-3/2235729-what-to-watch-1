@@ -1,23 +1,25 @@
 import FilmsList from '../films-list/films-list';
 import Film from '../../types/film';
-import {useState, FormEvent} from 'react';
-
+import {useState, FormEvent, useEffect} from 'react';
 type ShowMoreFilmsListProps = {
   films: Film[];
 }
 
 function ShowMoreFilmsList({films}: ShowMoreFilmsListProps): JSX.Element {
-  const plusShowCount = 8;
-  const [showCount, setShowCount] = useState(plusShowCount);
+  const SHOW_COUNT = 8;
+  const [showCount, setShowCount] = useState(SHOW_COUNT);
+  useEffect(() => {
+    setShowCount(SHOW_COUNT);
+  }, [films]);
   function addShowCountHandle(event: FormEvent<HTMLButtonElement>) {
     event.preventDefault();
-    setShowCount(Math.min(showCount + plusShowCount, films.length));
+    setShowCount(Math.min(showCount + SHOW_COUNT, films.length));
   }
   return (
     <>
       <FilmsList films={films.slice(0, showCount)}/>
       {
-        (showCount !== films.length) && (
+        (showCount < films.length) && (
           <div className="catalog__more">
             <button className="catalog__button" type="button" onClick={addShowCountHandle}>Show more</button>
           </div>)

@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import {Link, useParams, Navigate} from 'react-router-dom';
-import СommentSubmissionForm from '../../components/сomment-submission-form/сomment-submission-form';
+import СommentSubmissionForm from '../../components/review-submission-form/review-submission-form';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
 import {useAppSelector, useAppDispatch} from '../../hooks';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import {fetchFilm} from '../../store/api-actions';
 import NotFoundPage from '../not-found-page/not-found-page';
 import Loading from '../../components/loading/loading';
-import AuthorizationStatus from '../../types/authorizationStatus';
+import AuthorizationStatus from '../../types/authorization-status';
 
 
 function AddReviewPage(): JSX.Element {

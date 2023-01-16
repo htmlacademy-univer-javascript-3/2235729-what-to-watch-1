@@ -4,11 +4,11 @@ import {useAppDispatch} from '../../hooks';
 import {addReview} from '../../store/api-actions';
 
 
-type CommentSubmissionProps = {
+type ReviewSubmissionProps = {
   filmId: string;
 }
 
-function СommentSubmissionForm({filmId}: CommentSubmissionProps): JSX.Element {
+function ReviewSubmissionForm({filmId}: ReviewSubmissionProps): JSX.Element {
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(0);
   const dispatch = useAppDispatch();
@@ -63,4 +63,4 @@ function СommentSubmissionForm({filmId}: CommentSubmissionProps): JSX.Element {
     </div>);
 }
 
-export default СommentSubmissionForm;
+export default ReviewSubmissionForm;

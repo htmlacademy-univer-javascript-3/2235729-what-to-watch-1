@@ -2,7 +2,7 @@ import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {useAppSelector, useAppDispatch} from '../../hooks';
 import {fetchFilm} from '../../store/api-actions';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import Loading from '../../components/loading/loading';
 import NotFoundPage from '../not-found-page/not-found-page';
 
