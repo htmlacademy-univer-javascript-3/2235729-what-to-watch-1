@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {logout} from '../../store/api-actions';
-import AuthorizationStatus from '../../types/authorizationStatus';
-import {ReducerName} from '../../types/reducerName';
+import AuthorizationStatus from '../../types/authorization-status';
+import {ReducerName} from '../../types/reducer-name';
 
 
 function UserBlock(): JSX.Element {

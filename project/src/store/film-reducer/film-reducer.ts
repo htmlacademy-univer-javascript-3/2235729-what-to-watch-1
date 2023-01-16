@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ReducerName } from '../../types/reducerName';
-import Film from '../../types/film';
-import Review from '../../types/review';
+import { ReducerName } from '../../types/reducer-name';
+import FilmReducerState from '../../types/film-reducer-state';
 import {
   setFavorite,
   fetchReviews,
@@ -9,14 +8,7 @@ import {
   fetchSimilar
 } from '../api-actions';
 
-type State = {
-  film: Film | null;
-  reviews: Review[];
-  similar: Film[];
-  isLoading: boolean;
-}
-
-const initialState: State = {
+const initialState: FilmReducerState = {
   film: null,
   reviews: [],
   similar: [],

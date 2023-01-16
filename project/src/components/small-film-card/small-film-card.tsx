@@ -9,7 +9,7 @@ type SmallFilmCardProps = {
   srcPreviewVideo: string;
   isHovered: boolean;
   mouseOverHandler: (event: MouseEvent<HTMLDivElement>) => void;
-  mouseLeaveHandler: (hoverHandlerevent: MouseEvent<HTMLDivElement>) => void;
+  mouseLeaveHandler: (hoverHandlerEvent: MouseEvent<HTMLDivElement>) => void;
 }
 
 function SmallFilmCard({isHovered, srcImg, srcPreviewVideo, id, mouseLeaveHandler, mouseOverHandler, title}: SmallFilmCardProps): JSX.Element{

@@ -4,13 +4,13 @@ import {useAppSelector, useAppDispatch} from '../../hooks';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
 import UserBlock from '../../components/user-block/user-block';
-import {ReducerName} from '../../types/reducerName';
+import {ReducerName} from '../../types/reducer-name';
 import React, {useEffect} from 'react';
 import PlayButton from '../../components/play-button/play-button';
 import AddMyListButton from '../../components/add-my-list-button/add-my-list-button';
 import {fetchPromo} from '../../store/api-actions';
 import Loading from '../../components/loading/loading';
-import AuthorizationStatus from '../../types/authorizationStatus';
+import AuthorizationStatus from '../../types/authorization-status';
 
 function MainPage(): JSX.Element {
   const dispatch = useAppDispatch();

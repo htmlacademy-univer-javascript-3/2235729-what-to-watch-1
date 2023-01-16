@@ -1,16 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ReducerName } from '../../types/reducerName';
+import { ReducerName } from '../../types/reducer-name';
 import { dropToken, saveToken } from '../../services/token';
-import User from '../../types/user';
-import AuthorizationStatus from '../../types/authorizationStatus';
+import AuthorizationStatus from '../../types/authorization-status';
 import { checkAuth, login, logout } from '../api-actions';
+import AuthorizationReducerState from '../../types/authorization-reducer-state';
 
-type stateType = {
-  user: User | null;
-  authorizationStatus: string;
-}
-
-const initialState: stateType = {
+const initialState: AuthorizationReducerState = {
   authorizationStatus: AuthorizationStatus.NOT_AUTHORIZED,
   user: null
 };

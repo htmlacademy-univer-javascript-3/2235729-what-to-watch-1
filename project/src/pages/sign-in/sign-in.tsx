@@ -4,8 +4,8 @@ import React, {FormEvent, useState} from 'react';
 import {login} from '../../store/api-actions';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {Navigate} from 'react-router-dom';
-import AuthorizationStatus from '../../types/authorizationStatus';
-import {ReducerName} from '../../types/reducerName';
+import AuthorizationStatus from '../../types/authorization-status';
+import {ReducerName} from '../../types/reducer-name';
 
 
 function SignIn(): JSX.Element {

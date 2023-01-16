@@ -1,7 +1,7 @@
 import {Navigate} from 'react-router-dom';
 import {useAppSelector} from '../../hooks';
-import AuthorizationStatus from '../../types/authorizationStatus';
-import {ReducerName} from '../../types/reducerName';
+import AuthorizationStatus from '../../types/authorization-status';
+import {ReducerName} from '../../types/reducer-name';
 
 type PrivateRouteProps = {
   navigateTo: JSX.Element;
